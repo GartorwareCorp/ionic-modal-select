@@ -38,6 +38,7 @@
 					scope: {
 						initialOptions:"=options",
 						optionGetter:"&",
+                        optionSelectCallback: "&",
 						searchFilters: "=searchFilters",
 						searchProperties:'=',
 						onSelect: "&",
