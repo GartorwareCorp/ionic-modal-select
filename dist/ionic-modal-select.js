@@ -170,6 +170,7 @@ var modalSelectTemplates = modalSelectTemplates || {};modalSelectTemplates['moda
 					scope: {
 						initialOptions:"=options",
 						optionGetter:"&",
+                        optionSelectCallback: "&",
 						searchFilters: "=searchFilters",
 						searchProperties:'=',
 						onSelect: "&",
