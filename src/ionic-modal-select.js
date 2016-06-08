@@ -50,6 +50,7 @@
 						var shortListBreak = iAttrs.shortListBreak ? parseInt(iAttrs.shortListBreak) : 10;
 						var setFromProperty= iAttrs.optionProperty;
 						var onOptionSelect = iAttrs.optionGetter;
+                        var onOptionSelectCallback = iAttrs.optionSelectCallback;
 						var clearSearchOnSelect = iAttrs.clearSearchOnSelect !== "false" ? true : false;
 						var searchProperties = scope.searchProperties  ? scope.searchProperties : false;
 
@@ -211,6 +212,12 @@
 									}
 								}
 							});
+                            
+                            if (onOptionSelectCallback) {
+                                scope.optionSelectCallback({
+                                    option: option
+                                });
+                            }
 						};
 
 						// Filter object {id: <filterId>, active: <boolean>}
